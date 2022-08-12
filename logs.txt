@@ -1,0 +1,3046 @@
+* 
+* ==> Audit <==
+* |--------------|--------------------------|----------|--------|---------|-------------------------------|-------------------------------|
+|   Command    |           Args           | Profile  |  User  | Version |          Start Time           |           End Time            |
+|--------------|--------------------------|----------|--------|---------|-------------------------------|-------------------------------|
+| addons       | configure registry-creds | minikube | costav | v1.23.2 | Tue, 04 Jan 2022 20:16:28 GMT | Tue, 04 Jan 2022 20:17:45 GMT |
+| addons       | enable registry          | minikube | costav | v1.23.2 | Tue, 04 Jan 2022 20:18:30 GMT | Tue, 04 Jan 2022 20:18:51 GMT |
+| ip           |                          | minikube | costav | v1.23.2 | Tue, 04 Jan 2022 20:19:09 GMT | Tue, 04 Jan 2022 20:19:09 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sat, 08 Jan 2022 12:12:15 GMT | Sat, 08 Jan 2022 12:12:15 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sun, 06 Feb 2022 12:12:32 GMT | Sun, 06 Feb 2022 12:12:32 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Thu, 10 Feb 2022 19:10:30 GMT | Thu, 10 Feb 2022 19:10:30 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Fri, 11 Feb 2022 23:59:06 GMT | Fri, 11 Feb 2022 23:59:07 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sat, 12 Feb 2022 22:38:29 GMT | Sat, 12 Feb 2022 22:38:29 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sat, 12 Feb 2022 22:46:09 GMT | Sat, 12 Feb 2022 22:46:09 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sun, 13 Feb 2022 17:18:33 GMT | Sun, 13 Feb 2022 17:18:34 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Tue, 15 Feb 2022 17:27:43 GMT | Tue, 15 Feb 2022 17:27:43 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Tue, 15 Feb 2022 20:12:26 GMT | Tue, 15 Feb 2022 20:12:26 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Wed, 16 Feb 2022 13:45:32 GMT | Wed, 16 Feb 2022 13:45:32 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Thu, 17 Feb 2022 18:30:09 GMT | Thu, 17 Feb 2022 18:30:09 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sat, 19 Feb 2022 20:11:32 GMT | Sat, 19 Feb 2022 20:11:32 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sun, 20 Feb 2022 11:52:52 GMT | Sun, 20 Feb 2022 11:52:53 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Tue, 22 Feb 2022 17:49:51 GMT | Tue, 22 Feb 2022 17:49:51 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Wed, 23 Feb 2022 09:39:11 GMT | Wed, 23 Feb 2022 09:39:11 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Sun, 13 Mar 2022 14:22:25 GMT | Sun, 13 Mar 2022 14:22:25 GMT |
+| update-check |                          | minikube | costav | v1.24.0 | Fri, 20 May 2022 09:36:10 BST | Fri, 20 May 2022 09:36:10 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Tue, 24 May 2022 09:05:38 BST | Tue, 24 May 2022 09:05:39 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Sat, 28 May 2022 23:47:52 BST | Sat, 28 May 2022 23:47:52 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Sun, 29 May 2022 15:31:23 BST | Sun, 29 May 2022 15:31:23 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Wed, 01 Jun 2022 20:13:41 BST | Wed, 01 Jun 2022 20:13:41 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Fri, 03 Jun 2022 19:00:35 BST | Fri, 03 Jun 2022 19:00:35 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Mon, 06 Jun 2022 21:32:27 BST | Mon, 06 Jun 2022 21:32:27 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Thu, 09 Jun 2022 10:23:11 BST | Thu, 09 Jun 2022 10:23:12 BST |
+| update-check |                          | minikube | costav | v1.24.0 | Fri, 10 Jun 2022 04:15:46 BST | Fri, 10 Jun 2022 04:15:47 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Sat, 11 Jun 2022 18:58:02 BST | Sat, 11 Jun 2022 18:58:02 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Sat, 11 Jun 2022 18:58:17 BST | Sat, 11 Jun 2022 18:58:17 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Mon, 13 Jun 2022 22:41:05 BST | Mon, 13 Jun 2022 22:41:05 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Wed, 06 Jul 2022 18:58:34 BST | Wed, 06 Jul 2022 18:58:35 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Fri, 08 Jul 2022 16:31:00 BST | Fri, 08 Jul 2022 16:31:01 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Sat, 09 Jul 2022 21:34:23 BST | Sat, 09 Jul 2022 21:34:23 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Fri, 15 Jul 2022 15:09:06 BST | Fri, 15 Jul 2022 15:09:06 BST |
+| update-check |                          | minikube | costav | v1.25.2 | Fri, 15 Jul 2022 16:04:00 BST | Fri, 15 Jul 2022 16:04:00 BST |
+| update-check |                          | minikube | costav | v1.26.0 | 20 Jul 22 15:53 BST           | 20 Jul 22 15:53 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 20 Jul 22 16:05 BST           | 20 Jul 22 16:05 BST           |
+| addons       | list                     | minikube | costav | v1.23.2 | Sun, 24 Jul 2022 12:22:13 BST | Sun, 24 Jul 2022 12:22:13 BST |
+| help         |                          | minikube | costav | v1.23.2 | Sun, 24 Jul 2022 12:27:06 BST | Sun, 24 Jul 2022 12:27:06 BST |
+| start        | --help                   | minikube | costav | v1.23.2 | Sun, 24 Jul 2022 12:27:35 BST | Sun, 24 Jul 2022 12:27:35 BST |
+| update-check |                          | minikube | costav | v1.26.0 | 24 Jul 22 12:46 BST           | 24 Jul 22 12:46 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 26 Jul 22 09:52 BST           | 26 Jul 22 09:52 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 26 Jul 22 11:16 BST           | 26 Jul 22 11:16 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 02 Aug 22 15:42 BST           | 02 Aug 22 15:42 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 03 Aug 22 19:46 BST           | 03 Aug 22 19:46 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 05 Aug 22 11:41 BST           | 05 Aug 22 11:41 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 05 Aug 22 15:38 BST           | 05 Aug 22 15:38 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 12 Aug 22 10:51 BST           | 12 Aug 22 10:51 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 12 Aug 22 11:52 BST           | 12 Aug 22 11:52 BST           |
+| update-check |                          | minikube | costav | v1.26.0 | 12 Aug 22 14:25 BST           | 12 Aug 22 14:25 BST           |
+| completion   | zsh                      | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 14:50:26 BST | Fri, 12 Aug 2022 14:50:26 BST |
+| completion   | zsh                      | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 14:50:35 BST | Fri, 12 Aug 2022 14:50:35 BST |
+| update-check |                          | minikube | costav | v1.26.0 | 12 Aug 22 15:00 BST           | 12 Aug 22 15:00 BST           |
+| config       |                          | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 15:24:34 BST | Fri, 12 Aug 2022 15:24:34 BST |
+| config       | view                     | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 15:24:42 BST | Fri, 12 Aug 2022 15:24:42 BST |
+| delete       |                          | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 15:29:58 BST | Fri, 12 Aug 2022 15:29:58 BST |
+| delete       |                          | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 15:32:52 BST | Fri, 12 Aug 2022 15:32:53 BST |
+| config       | view                     | minikube | costav | v1.23.2 | Fri, 12 Aug 2022 15:34:57 BST | Fri, 12 Aug 2022 15:34:57 BST |
+| delete       | --all                    | sandbox  | costav | v1.23.2 | Fri, 12 Aug 2022 15:36:01 BST | Fri, 12 Aug 2022 15:36:01 BST |
+|--------------|--------------------------|----------|--------|---------|-------------------------------|-------------------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/08/12 15:33:01
+Running on machine: costav-pc
+Binary: Built with gc go1.17.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0812 15:33:01.392691   38904 out.go:298] Setting OutFile to fd 1 ...
+I0812 15:33:01.392842   38904 out.go:350] isatty.IsTerminal(1) = true
+I0812 15:33:01.392845   38904 out.go:311] Setting ErrFile to fd 2...
+I0812 15:33:01.392849   38904 out.go:350] isatty.IsTerminal(2) = true
+I0812 15:33:01.392953   38904 root.go:313] Updating PATH: /home/costav/.minikube/bin
+I0812 15:33:01.393159   38904 out.go:305] Setting JSON to false
+I0812 15:33:01.416891   38904 start.go:111] hostinfo: {"hostname":"costav-pc","uptime":4097,"bootTime":1660310684,"procs":391,"os":"linux","platform":"linuxmint","platformFamily":"debian","platformVersion":"20.2","kernelVersion":"5.4.0-124-generic","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"dafd9a61-376b-4676-aa8b-190bc1ed4b43"}
+I0812 15:33:01.416961   38904 start.go:121] virtualization: kvm host
+I0812 15:33:01.419430   38904 out.go:177] 😄  minikube v1.23.2 on Linuxmint 20.2
+I0812 15:33:01.419573   38904 notify.go:169] Checking for updates...
+I0812 15:33:01.419892   38904 config.go:177] Loaded profile config "demo": Driver=virtualbox, ContainerRuntime=docker, KubernetesVersion=v1.22.2
+I0812 15:33:01.420002   38904 config.go:177] Loaded profile config "sandbox": Driver=virtualbox, ContainerRuntime=docker, KubernetesVersion=v1.22.2
+I0812 15:33:01.420038   38904 driver.go:343] Setting default libvirt URI to qemu:///system
+I0812 15:33:01.468582   38904 out.go:177] ✨  Using the virtualbox driver based on user configuration
+I0812 15:33:01.468608   38904 start.go:278] selected driver: virtualbox
+I0812 15:33:01.468612   38904 start.go:751] validating driver "virtualbox" against <nil>
+I0812 15:33:01.468626   38904 start.go:762] status for virtualbox: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc:}
+I0812 15:33:01.469089   38904 start_flags.go:264] no existing cluster config was found, will generate one from the flags 
+I0812 15:33:01.469763   38904 start_flags.go:719] Wait components to verify : map[apiserver:true system_pods:true]
+I0812 15:33:01.469779   38904 cni.go:93] Creating CNI manager for ""
+I0812 15:33:01.469791   38904 cni.go:167] CNI unnecessary in this configuration, recommending no CNI
+I0812 15:33:01.469795   38904 start_flags.go:278] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.27@sha256:89b4738ee74ba28684676e176752277f0db46f57d27f0e08c3feec89311e22de Memory:8192 CPUs:4 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.99.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0}
+I0812 15:33:01.469897   38904 iso.go:123] acquiring lock: {Name:mk5b5ba87ae6447906754bc47283d099a7a8947b Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0812 15:33:01.471968   38904 out.go:177] 👍  Starting control plane node minikube in cluster minikube
+I0812 15:33:01.471989   38904 preload.go:131] Checking if preload exists for k8s version v1.22.2 and runtime docker
+I0812 15:33:01.472011   38904 preload.go:147] Found local preload: /home/costav/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.2-docker-overlay2-amd64.tar.lz4
+I0812 15:33:01.472016   38904 cache.go:57] Caching tarball of preloaded images
+I0812 15:33:01.472114   38904 preload.go:173] Found /home/costav/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v13-v1.22.2-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0812 15:33:01.472131   38904 cache.go:60] Finished verifying existence of preloaded tar for  v1.22.2 on docker
+I0812 15:33:01.472235   38904 profile.go:148] Saving config to /home/costav/.minikube/profiles/minikube/config.json ...
+I0812 15:33:01.472254   38904 lock.go:36] WriteFile acquiring /home/costav/.minikube/profiles/minikube/config.json: {Name:mk955905c493b35262936b11c64325fe0e34c0df Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0812 15:33:01.472358   38904 cache.go:206] Successfully downloaded all kic artifacts
+I0812 15:33:01.472377   38904 start.go:313] acquiring machines lock for minikube: {Name:mk162f534f7a85260b29c390fe155523b6d90c99 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0812 15:33:01.472420   38904 start.go:317] acquired machines lock for "minikube" in 33.926µs
+I0812 15:33:01.472430   38904 start.go:89] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.23.1.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.27@sha256:89b4738ee74ba28684676e176752277f0db46f57d27f0e08c3feec89311e22de Memory:8192 CPUs:4 DiskSize:20000 VMDriver: Driver:virtualbox HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.99.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.22.2 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.22.2 ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0} &{Name: IP: Port:8443 KubernetesVersion:v1.22.2 ControlPlane:true Worker:true}
+I0812 15:33:01.472475   38904 start.go:126] createHost starting for "" (driver="virtualbox")
+I0812 15:33:01.474539   38904 out.go:204] 🔥  Creating virtualbox VM (CPUs=4, Memory=8192MB, Disk=20000MB) ...
+I0812 15:33:01.474801   38904 start.go:160] libmachine.API.Create for "minikube" (driver="virtualbox")
+I0812 15:33:01.474819   38904 client.go:168] LocalClient.Create starting
+I0812 15:33:01.474886   38904 main.go:130] libmachine: Reading certificate data from /home/costav/.minikube/certs/ca.pem
+I0812 15:33:01.474910   38904 main.go:130] libmachine: Decoding PEM data...
+I0812 15:33:01.474922   38904 main.go:130] libmachine: Parsing certificate...
+I0812 15:33:01.474974   38904 main.go:130] libmachine: Reading certificate data from /home/costav/.minikube/certs/cert.pem
+I0812 15:33:01.474990   38904 main.go:130] libmachine: Decoding PEM data...
+I0812 15:33:01.475007   38904 main.go:130] libmachine: Parsing certificate...
+I0812 15:33:01.475028   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage --version
+I0812 15:33:01.502724   38904 main.go:130] libmachine: STDOUT:
+{
+6.1.34_Ubuntur150636
+}
+I0812 15:33:01.502734   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:01.502759   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list hostonlyifs
+I0812 15:33:01.616695   38904 main.go:130] libmachine: STDOUT:
+{
+Name:            vboxnet2
+GUID:            786f6276-656e-4274-8000-0a0027000002
+DHCP:            Disabled
+IPAddress:       192.168.99.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:02
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet2
+
+Name:            vboxnet3
+GUID:            786f6276-656e-4374-8000-0a0027000003
+DHCP:            Disabled
+IPAddress:       192.168.50.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:03
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet3
+
+Name:            vboxnet4
+GUID:            786f6276-656e-4474-8000-0a0027000004
+DHCP:            Disabled
+IPAddress:       10.0.2.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:04
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet4
+
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
+DHCP:            Disabled
+IPAddress:       192.168.10.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:01
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
+
+Name:            vboxnet0
+GUID:            786f6276-656e-4074-8000-0a0027000000
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:00
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+
+}
+I0812 15:33:01.616705   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:01.617087   38904 main.go:130] libmachine: Downloading /home/costav/.minikube/cache/boot2docker.iso from file:///home/costav/.minikube/cache/iso/minikube-v1.23.1.iso...
+I0812 15:33:02.061196   38904 main.go:130] libmachine: Creating VirtualBox VM...
+I0812 15:33:02.061210   38904 main.go:130] libmachine: Creating SSH key...
+I0812 15:33:02.205273   38904 main.go:130] libmachine: Creating disk image...
+I0812 15:33:02.205285   38904 main.go:130] libmachine: Creating 20000 MB hard disk image...
+I0812 15:33:02.205289   38904 main.go:130] libmachine: Writing magic tar header
+I0812 15:33:02.205302   38904 main.go:130] libmachine: Writing SSH key tar header
+I0812 15:33:02.205324   38904 main.go:130] libmachine: Calling inner createDiskImage
+I0812 15:33:02.205335   38904 main.go:130] libmachine: /usr/bin/VBoxManage convertfromraw stdin /home/costav/.minikube/machines/minikube/disk.vmdk 20971520000 --format VMDK
+I0812 15:33:02.205352   38904 main.go:130] libmachine: Starting command
+I0812 15:33:02.205524   38904 main.go:130] libmachine: Copying to stdin
+I0812 15:33:02.205535   38904 main.go:130] libmachine: Filling zeroes
+I0812 15:33:07.187682   38904 main.go:130] libmachine: Closing STDIN
+I0812 15:33:07.187702   38904 main.go:130] libmachine: Waiting on cmd
+I0812 15:33:07.191842   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage createvm --basefolder /home/costav/.minikube/machines/minikube --name minikube --register
+I0812 15:33:07.245280   38904 main.go:130] libmachine: STDOUT:
+{
+Virtual machine 'minikube' is created and registered.
+UUID: ed15f355-2491-4ea1-9d47-b032268a2849
+Settings file: '/home/costav/.minikube/machines/minikube/minikube/minikube.vbox'
+}
+I0812 15:33:07.245287   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.245290   38904 main.go:130] libmachine: VM CPUS: 4
+I0812 15:33:07.245292   38904 main.go:130] libmachine: VM Memory: 8192
+I0812 15:33:07.245309   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage modifyvm minikube --firmware bios --bioslogofadein off --bioslogofadeout off --bioslogodisplaytime 0 --biosbootmenu disabled --ostype Linux26_64 --cpus 4 --memory 8192 --acpi on --ioapic on --rtcuseutc on --natdnshostresolver1 on --natdnsproxy1 off --cpuhotplug off --pae on --hpet on --hwvirtex on --nestedpaging on --largepages on --vtxvpid on --accelerate3d off --boot1 dvd
+I0812 15:33:07.295490   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.295528   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.295562   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage modifyvm minikube --nic1 nat --nictype1 virtio --cableconnected1 on
+I0812 15:33:07.377972   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.378000   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.378034   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage storagectl minikube --name SATA --add sata --hostiocache on
+I0812 15:33:07.442755   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.442762   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.442784   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage storageattach minikube --storagectl SATA --port 0 --device 0 --type dvddrive --medium /home/costav/.minikube/machines/minikube/boot2docker.iso
+I0812 15:33:07.487132   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.487139   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.487176   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage storageattach minikube --storagectl SATA --port 1 --device 0 --type hdd --medium /home/costav/.minikube/machines/minikube/disk.vmdk
+I0812 15:33:07.535862   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.535869   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.535880   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountPrefix /
+I0812 15:33:07.578274   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.578281   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.578290   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage guestproperty set minikube /VirtualBox/GuestAdd/SharedFolders/MountDir /
+I0812 15:33:07.619910   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.619918   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.619927   38904 main.go:130] libmachine: setting up shareDir '/home' -> 'hosthome'
+I0812 15:33:07.619941   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage sharedfolder add minikube --name hosthome --hostpath /home --automount
+I0812 15:33:07.659821   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.659829   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.659837   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage setextradata minikube VBoxInternal2/SharedFoldersEnableSymlinksCreate/hosthome 1
+I0812 15:33:07.701641   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:07.701652   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.701656   38904 main.go:130] libmachine: Starting the VM...
+I0812 15:33:07.701663   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:07.761182   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="poweroff"
+VMStateChangeTime="2022-08-12T14:33:07.225000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+nic2="none"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+}
+I0812 15:33:07.761190   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.761223   38904 main.go:130] libmachine: Check network to re-create if needed...
+I0812 15:33:07.761230   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list hostonlyifs
+I0812 15:33:07.898203   38904 main.go:130] libmachine: STDOUT:
+{
+Name:            vboxnet2
+GUID:            786f6276-656e-4274-8000-0a0027000002
+DHCP:            Disabled
+IPAddress:       192.168.99.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:02
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet2
+
+Name:            vboxnet3
+GUID:            786f6276-656e-4374-8000-0a0027000003
+DHCP:            Disabled
+IPAddress:       192.168.50.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:03
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet3
+
+Name:            vboxnet4
+GUID:            786f6276-656e-4474-8000-0a0027000004
+DHCP:            Disabled
+IPAddress:       10.0.2.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:04
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet4
+
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
+DHCP:            Disabled
+IPAddress:       192.168.10.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:01
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
+
+Name:            vboxnet0
+GUID:            786f6276-656e-4074-8000-0a0027000000
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:00
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+
+}
+I0812 15:33:07.898211   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.898958   38904 main.go:130] libmachine: Searching for hostonly interface for IPv4: 192.168.99.1 and Mask: ffffff00
+I0812 15:33:07.898963   38904 main.go:130] libmachine: Found: vboxnet2
+I0812 15:33:07.898968   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list dhcpservers
+I0812 15:33:07.940712   38904 main.go:130] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-vboxnet0
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+
+NetworkName:    HostInterfaceNetworking-vboxnet2
+Dhcpd IP:       192.168.99.10
+LowerIPAddress: 192.168.99.100
+UpperIPAddress: 192.168.99.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I0812 15:33:07.940719   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:07.940772   38904 main.go:130] libmachine: Removing orphan DHCP servers...
+I0812 15:33:07.940777   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list hostonlyifs
+I0812 15:33:08.053752   38904 main.go:130] libmachine: STDOUT:
+{
+Name:            vboxnet2
+GUID:            786f6276-656e-4274-8000-0a0027000002
+DHCP:            Disabled
+IPAddress:       192.168.99.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:02
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet2
+
+Name:            vboxnet3
+GUID:            786f6276-656e-4374-8000-0a0027000003
+DHCP:            Disabled
+IPAddress:       192.168.50.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:03
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet3
+
+Name:            vboxnet4
+GUID:            786f6276-656e-4474-8000-0a0027000004
+DHCP:            Disabled
+IPAddress:       10.0.2.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:04
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet4
+
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
+DHCP:            Disabled
+IPAddress:       192.168.10.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:01
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
+
+Name:            vboxnet0
+GUID:            786f6276-656e-4074-8000-0a0027000000
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:00
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+
+}
+I0812 15:33:08.053801   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.054237   38904 main.go:130] libmachine: Adding/Modifying DHCP server "192.168.99.24" with address range "192.168.99.100" - "192.168.99.254"...
+I0812 15:33:08.054263   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list dhcpservers
+I0812 15:33:08.129742   38904 main.go:130] libmachine: STDOUT:
+{
+NetworkName:    HostInterfaceNetworking-vboxnet0
+Dhcpd IP:       192.168.56.100
+LowerIPAddress: 192.168.56.101
+UpperIPAddress: 192.168.56.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+
+NetworkName:    HostInterfaceNetworking-vboxnet2
+Dhcpd IP:       192.168.99.10
+LowerIPAddress: 192.168.99.100
+UpperIPAddress: 192.168.99.254
+NetworkMask:    255.255.255.0
+Enabled:        Yes
+Global Configuration:
+    minLeaseTime:     default
+    defaultLeaseTime: default
+    maxLeaseTime:     default
+    Forced options:   None
+    Suppressed opts.: None
+        1/legacy: 255.255.255.0
+Groups:               None
+Individual Configs:   None
+}
+I0812 15:33:08.129755   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.129861   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage dhcpserver modify --netname HostInterfaceNetworking-vboxnet2 --ip 192.168.99.24 --netmask 255.255.255.0 --lowerip 192.168.99.100 --upperip 192.168.99.254 --enable
+I0812 15:33:08.194174   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:08.194195   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.194266   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage modifyvm minikube --nic2 hostonly --nictype2 virtio --nicpromisc2 deny --hostonlyadapter2 vboxnet2 --cableconnected2 on
+I0812 15:33:08.260301   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:08.260313   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.260362   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage modifyvm minikube --natpf1 delete ssh
+I0812 15:33:08.296715   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:08.296728   38904 main.go:130] libmachine: STDERR:
+{
+VBoxManage: error: Code NS_ERROR_INVALID_ARG (0x80070057) - Invalid argument value (extended info not available)
+VBoxManage: error: Context: "RemoveRedirect(Bstr(ValueUnion.psz).raw())" at line 1936 of file VBoxManageModifyVM.cpp
+}
+I0812 15:33:08.296748   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage modifyvm minikube --natpf1 ssh,tcp,127.0.0.1,41987,,22
+I0812 15:33:08.354602   38904 main.go:130] libmachine: STDOUT:
+{
+}
+I0812 15:33:08.354628   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.354657   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage startvm minikube --type headless
+I0812 15:33:08.718146   38904 main.go:130] libmachine: STDOUT:
+{
+Waiting for VM "minikube" to power on...
+VM "minikube" has been successfully started.
+}
+I0812 15:33:08.718156   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:08.718170   38904 main.go:130] libmachine: Checking vm logs: /home/costav/.minikube/machines/minikube/minikube/Logs/VBox.log
+I0812 15:33:08.718608   38904 main.go:130] libmachine: Waiting for an IP...
+I0812 15:33:08.718617   38904 main.go:130] libmachine: Getting to WaitForSSH function...
+I0812 15:33:08.718657   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:08.718820   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:08.718826   38904 main.go:130] libmachine: About to run SSH command:
+exit 0
+I0812 15:33:39.136280   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I0812 15:33:39.136322   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:39.211554   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:39.211563   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.211604   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:39.264912   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:39.264921   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.265052   38904 main.go:130] libmachine: Host-only MAC: 0800276c3606
+
+I0812 15:33:39.265086   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:39.265181   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:39.265186   38904 main.go:130] libmachine: About to run SSH command:
+ip addr show
+I0812 15:33:39.392566   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I0812 15:33:39.392671   38904 main.go:130] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I0812 15:33:39.392699   38904 main.go:130] libmachine: IP is 192.168.99.118
+I0812 15:33:39.392725   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:39.484024   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:39.484047   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.484187   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:39.578589   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:39.578598   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.578719   38904 main.go:130] libmachine: Host-only MAC: 0800276c3606
+
+I0812 15:33:39.578750   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:39.578848   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:39.578852   38904 main.go:130] libmachine: About to run SSH command:
+ip addr show
+I0812 15:33:39.676650   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I0812 15:33:39.676757   38904 main.go:130] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I0812 15:33:39.676804   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage list hostonlyifs
+I0812 15:33:39.816153   38904 main.go:130] libmachine: STDOUT:
+{
+Name:            vboxnet2
+GUID:            786f6276-656e-4274-8000-0a0027000002
+DHCP:            Disabled
+IPAddress:       192.168.99.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:02
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet2
+
+Name:            vboxnet3
+GUID:            786f6276-656e-4374-8000-0a0027000003
+DHCP:            Disabled
+IPAddress:       192.168.50.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:03
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet3
+
+Name:            vboxnet4
+GUID:            786f6276-656e-4474-8000-0a0027000004
+DHCP:            Disabled
+IPAddress:       10.0.2.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:04
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet4
+
+Name:            vboxnet1
+GUID:            786f6276-656e-4174-8000-0a0027000001
+DHCP:            Disabled
+IPAddress:       192.168.10.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:01
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet1
+
+Name:            vboxnet0
+GUID:            786f6276-656e-4074-8000-0a0027000000
+DHCP:            Disabled
+IPAddress:       192.168.56.1
+NetworkMask:     255.255.255.0
+IPV6Address:     
+IPV6NetworkMaskPrefixLength: 0
+HardwareAddress: 0a:00:27:00:00:00
+MediumType:      Ethernet
+Wireless:        No
+Status:          Down
+VBoxNetworkName: HostInterfaceNetworking-vboxnet0
+
+}
+I0812 15:33:39.816165   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.817262   38904 main.go:130] libmachine: Found: vboxnet2
+I0812 15:33:39.817274   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:39.906893   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:39.906904   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:39.906963   38904 machine.go:88] provisioning docker machine ...
+I0812 15:33:39.906980   38904 buildroot.go:166] provisioning hostname "minikube"
+I0812 15:33:39.907028   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:39.907183   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:39.907192   38904 main.go:130] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I0812 15:33:40.026324   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0812 15:33:40.026400   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:40.026599   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:40.026620   38904 main.go:130] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0812 15:33:40.129386   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 
+I0812 15:33:40.129420   38904 buildroot.go:172] set auth options {CertDir:/home/costav/.minikube CaCertPath:/home/costav/.minikube/certs/ca.pem CaPrivateKeyPath:/home/costav/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/costav/.minikube/machines/server.pem ServerKeyPath:/home/costav/.minikube/machines/server-key.pem ClientKeyPath:/home/costav/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/costav/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/costav/.minikube}
+I0812 15:33:40.129439   38904 buildroot.go:174] setting up certificates
+I0812 15:33:40.129448   38904 provision.go:83] configureAuth start
+I0812 15:33:40.129489   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:40.204448   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:40.204457   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:40.204515   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:40.259308   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:40.259316   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:40.259423   38904 main.go:130] libmachine: Host-only MAC: 0800276c3606
+
+I0812 15:33:40.259453   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:40.259543   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:40.259547   38904 main.go:130] libmachine: About to run SSH command:
+ip addr show
+I0812 15:33:40.339654   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+I0812 15:33:40.339706   38904 main.go:130] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86388sec preferred_lft 86388sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 588sec preferred_lft 588sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+
+END SSH
+
+I0812 15:33:40.339718   38904 provision.go:138] copyHostCerts
+I0812 15:33:40.339764   38904 exec_runner.go:145] found /home/costav/.minikube/ca.pem, removing ...
+I0812 15:33:40.339770   38904 exec_runner.go:208] rm: /home/costav/.minikube/ca.pem
+I0812 15:33:40.339845   38904 exec_runner.go:152] cp: /home/costav/.minikube/certs/ca.pem --> /home/costav/.minikube/ca.pem (1078 bytes)
+I0812 15:33:40.339967   38904 exec_runner.go:145] found /home/costav/.minikube/cert.pem, removing ...
+I0812 15:33:40.339972   38904 exec_runner.go:208] rm: /home/costav/.minikube/cert.pem
+I0812 15:33:40.340005   38904 exec_runner.go:152] cp: /home/costav/.minikube/certs/cert.pem --> /home/costav/.minikube/cert.pem (1123 bytes)
+I0812 15:33:40.340094   38904 exec_runner.go:145] found /home/costav/.minikube/key.pem, removing ...
+I0812 15:33:40.340098   38904 exec_runner.go:208] rm: /home/costav/.minikube/key.pem
+I0812 15:33:40.340129   38904 exec_runner.go:152] cp: /home/costav/.minikube/certs/key.pem --> /home/costav/.minikube/key.pem (1675 bytes)
+I0812 15:33:40.340207   38904 provision.go:112] generating server cert: /home/costav/.minikube/machines/server.pem ca-key=/home/costav/.minikube/certs/ca.pem private-key=/home/costav/.minikube/certs/ca-key.pem org=costav.minikube san=[192.168.99.118 127.0.0.1 localhost 127.0.0.1 minikube minikube]
+I0812 15:33:40.438152   38904 provision.go:172] copyRemoteCerts
+I0812 15:33:40.438201   38904 ssh_runner.go:152] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0812 15:33:40.438209   38904 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:41987 SSHKeyPath:/home/costav/.minikube/machines/minikube/id_rsa Username:docker}
+I0812 15:33:40.510447   38904 ssh_runner.go:319] scp /home/costav/.minikube/certs/ca.pem --> /etc/docker/ca.pem (1078 bytes)
+I0812 15:33:40.559452   38904 ssh_runner.go:319] scp /home/costav/.minikube/machines/server.pem --> /etc/docker/server.pem (1200 bytes)
+I0812 15:33:40.589209   38904 ssh_runner.go:319] scp /home/costav/.minikube/machines/server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0812 15:33:40.619724   38904 provision.go:86] duration metric: configureAuth took 490.265372ms
+I0812 15:33:40.619738   38904 buildroot.go:189] setting minikube options for container-runtime
+I0812 15:33:40.619908   38904 config.go:177] Loaded profile config "minikube": Driver=virtualbox, ContainerRuntime=docker, KubernetesVersion=v1.22.2
+I0812 15:33:40.619959   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:40.620107   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:40.620115   38904 main.go:130] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0812 15:33:40.704742   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: tmpfs
+
+I0812 15:33:40.704755   38904 buildroot.go:70] root file system type: tmpfs
+I0812 15:33:40.704956   38904 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I0812 15:33:40.705014   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:40.705162   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:40.705243   38904 main.go:130] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=virtualbox --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0812 15:33:40.888185   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=virtualbox --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I0812 15:33:40.888353   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:40.888696   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:40.888738   38904 main.go:130] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0812 15:33:41.465224   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: diff: can't stat '/lib/systemd/system/docker.service': No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+
+I0812 15:33:41.465232   38904 machine.go:91] provisioned docker machine in 1.558265845s
+I0812 15:33:41.465237   38904 client.go:171] LocalClient.Create took 39.990415762s
+I0812 15:33:41.465243   38904 start.go:168] duration metric: libmachine.API.Create for "minikube" took 39.990444431s
+I0812 15:33:41.465246   38904 start.go:267] post-start starting for "minikube" (driver="virtualbox")
+I0812 15:33:41.465248   38904 start.go:277] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0812 15:33:41.465296   38904 ssh_runner.go:152] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0812 15:33:41.465304   38904 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:41987 SSHKeyPath:/home/costav/.minikube/machines/minikube/id_rsa Username:docker}
+I0812 15:33:41.502444   38904 ssh_runner.go:152] Run: cat /etc/os-release
+I0812 15:33:41.504918   38904 info.go:137] Remote host: Buildroot 2021.02.4
+I0812 15:33:41.504925   38904 filesync.go:126] Scanning /home/costav/.minikube/addons for local assets ...
+I0812 15:33:41.504954   38904 filesync.go:126] Scanning /home/costav/.minikube/files for local assets ...
+I0812 15:33:41.504965   38904 start.go:270] post-start completed in 39.71617ms
+I0812 15:33:41.505134   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:41.550730   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:41.550740   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:41.550776   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:41.606585   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:41.606593   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:41.606704   38904 main.go:130] libmachine: Host-only MAC: 0800276c3606
+
+I0812 15:33:41.606734   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:41.606825   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:41.606828   38904 main.go:130] libmachine: About to run SSH command:
+ip addr show
+I0812 15:33:41.683022   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86386sec preferred_lft 86386sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 586sec preferred_lft 586sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:a8:4d:e2:d4 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+I0812 15:33:41.683096   38904 main.go:130] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86386sec preferred_lft 86386sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 586sec preferred_lft 586sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:a8:4d:e2:d4 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+END SSH
+
+I0812 15:33:41.683218   38904 profile.go:148] Saving config to /home/costav/.minikube/profiles/minikube/config.json ...
+I0812 15:33:41.683440   38904 start.go:129] duration metric: createHost completed in 40.210953887s
+I0812 15:33:41.683448   38904 start.go:80] releasing machines lock for "minikube", held for 40.211022249s
+I0812 15:33:41.683482   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:41.767402   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:41.767412   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:41.767458   38904 main.go:130] libmachine: COMMAND: /usr/bin/VBoxManage showvminfo minikube --machinereadable
+I0812 15:33:41.837504   38904 main.go:130] libmachine: STDOUT:
+{
+name="minikube"
+groups="/"
+ostype="Linux 2.6 / 3.x / 4.x (64-bit)"
+UUID="ed15f355-2491-4ea1-9d47-b032268a2849"
+CfgFile="/home/costav/.minikube/machines/minikube/minikube/minikube.vbox"
+SnapFldr="/home/costav/.minikube/machines/minikube/minikube/Snapshots"
+LogFldr="/home/costav/.minikube/machines/minikube/minikube/Logs"
+hardwareuuid="ed15f355-2491-4ea1-9d47-b032268a2849"
+memory=8192
+pagefusion="off"
+vram=8
+cpuexecutioncap=100
+hpet="on"
+cpu-profile="host"
+chipset="piix3"
+firmware="BIOS"
+cpus=4
+pae="on"
+longmode="on"
+triplefaultreset="off"
+apic="on"
+x2apic="off"
+nested-hw-virt="off"
+cpuid-portability-level=0
+bootmenu="disabled"
+boot1="dvd"
+boot2="dvd"
+boot3="disk"
+boot4="none"
+acpi="on"
+ioapic="on"
+biosapic="apic"
+biossystemtimeoffset=0
+rtcuseutc="on"
+hwvirtex="on"
+nestedpaging="on"
+largepages="on"
+vtxvpid="on"
+vtxux="on"
+paravirtprovider="default"
+effparavirtprovider="kvm"
+VMState="running"
+VMStateChangeTime="2022-08-12T14:33:08.700000000"
+graphicscontroller="vboxvga"
+monitorcount=1
+accelerate3d="off"
+accelerate2dvideo="off"
+teleporterenabled="off"
+teleporterport=0
+teleporteraddress=""
+teleporterpassword=""
+tracing-enabled="off"
+tracing-allow-vm-access="off"
+tracing-config=""
+autostart-enabled="off"
+autostart-delay=0
+defaultfrontend=""
+vmprocpriority="default"
+storagecontrollername0="SATA"
+storagecontrollertype0="IntelAhci"
+storagecontrollerinstance0="0"
+storagecontrollermaxportcount0="30"
+storagecontrollerportcount0="30"
+storagecontrollerbootable0="on"
+"SATA-0-0"="/home/costav/.minikube/machines/minikube/boot2docker.iso"
+"SATA-ImageUUID-0-0"="4eefb020-955d-494b-80ee-fa042d97f8f4"
+"SATA-tempeject"="off"
+"SATA-IsEjected"="off"
+"SATA-1-0"="/home/costav/.minikube/machines/minikube/disk.vmdk"
+"SATA-ImageUUID-1-0"="0ee73d8c-383e-4860-98eb-1db719fb77a8"
+"SATA-2-0"="none"
+"SATA-3-0"="none"
+"SATA-4-0"="none"
+"SATA-5-0"="none"
+"SATA-6-0"="none"
+"SATA-7-0"="none"
+"SATA-8-0"="none"
+"SATA-9-0"="none"
+"SATA-10-0"="none"
+"SATA-11-0"="none"
+"SATA-12-0"="none"
+"SATA-13-0"="none"
+"SATA-14-0"="none"
+"SATA-15-0"="none"
+"SATA-16-0"="none"
+"SATA-17-0"="none"
+"SATA-18-0"="none"
+"SATA-19-0"="none"
+"SATA-20-0"="none"
+"SATA-21-0"="none"
+"SATA-22-0"="none"
+"SATA-23-0"="none"
+"SATA-24-0"="none"
+"SATA-25-0"="none"
+"SATA-26-0"="none"
+"SATA-27-0"="none"
+"SATA-28-0"="none"
+"SATA-29-0"="none"
+natnet1="nat"
+macaddress1="0800274E54BE"
+cableconnected1="on"
+nic1="nat"
+nictype1="virtio"
+nicspeed1="0"
+mtu="0"
+sockSnd="64"
+sockRcv="64"
+tcpWndSnd="64"
+tcpWndRcv="64"
+Forwarding(0)="ssh,tcp,127.0.0.1,41987,,22"
+hostonlyadapter2="vboxnet2"
+macaddress2="0800276C3606"
+cableconnected2="on"
+nic2="hostonly"
+nictype2="virtio"
+nicspeed2="0"
+nic3="none"
+nic4="none"
+nic5="none"
+nic6="none"
+nic7="none"
+nic8="none"
+hidpointing="ps2mouse"
+hidkeyboard="ps2kbd"
+uart1="off"
+uart2="off"
+uart3="off"
+uart4="off"
+lpt1="off"
+lpt2="off"
+audio="pulse"
+audio_out="off"
+audio_in="off"
+clipboard="disabled"
+draganddrop="disabled"
+SessionName="headless"
+VideoMode="720,400,0"@0,0 1
+vrde="off"
+usb="off"
+ehci="off"
+xhci="off"
+SharedFolderNameMachineMapping1="hosthome"
+SharedFolderPathMachineMapping1="/home"
+VRDEActiveConnection="off"
+VRDEClients==0
+videocap="off"
+videocapaudio="off"
+capturescreens=""
+capturefilename="/home/costav/.minikube/machines/minikube/minikube/minikube.webm"
+captureres="1024x768"
+capturevideorate=512
+capturevideofps=25
+captureopts=""
+GuestMemoryBalloon=0
+GuestOSType="Linux26_64"
+GuestAdditionsRunLevel=2
+GuestAdditionsVersion="5.2.42 r137960"
+GuestAdditionsFacility_VirtualBox Base Driver=50,1660314807144
+GuestAdditionsFacility_VirtualBox System Service=50,1660314807395
+GuestAdditionsFacility_Seamless Mode=0,1660314807596
+GuestAdditionsFacility_Graphics Mode=0,1660314807143
+}
+I0812 15:33:41.837514   38904 main.go:130] libmachine: STDERR:
+{
+}
+I0812 15:33:41.837674   38904 main.go:130] libmachine: Host-only MAC: 0800276c3606
+
+I0812 15:33:41.837713   38904 main.go:130] libmachine: Using SSH client type: native
+I0812 15:33:41.837839   38904 main.go:130] libmachine: &{{{<nil> 0 [] [] []} docker [0x7a1d00] 0x7a4de0 <nil>  [] 0s} 127.0.0.1 41987 <nil> <nil>}
+I0812 15:33:41.837845   38904 main.go:130] libmachine: About to run SSH command:
+ip addr show
+I0812 15:33:41.919401   38904 main.go:130] libmachine: SSH cmd err, output: <nil>: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86386sec preferred_lft 86386sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 586sec preferred_lft 586sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:a8:4d:e2:d4 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+I0812 15:33:41.919471   38904 main.go:130] libmachine: SSH returned: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4e:54:be brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 86386sec preferred_lft 86386sec
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:6c:36:06 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.99.118/24 brd 192.168.99.255 scope global dynamic eth1
+       valid_lft 586sec preferred_lft 586sec
+4: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:a8:4d:e2:d4 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+
+END SSH
+
+W0812 15:33:44.920484   38904 start.go:609] dial failed (will retry): dial tcp 192.168.99.118:22: i/o timeout
+I0812 15:33:44.920552   38904 retry.go:31] will retry after 1.104660288s: dial tcp 192.168.99.118:22: i/o timeout
+W0812 15:33:49.026336   38904 start.go:609] dial failed (will retry): dial tcp 192.168.99.118:22: i/o timeout
+I0812 15:33:49.026378   38904 retry.go:31] will retry after 2.160763633s: dial tcp 192.168.99.118:22: i/o timeout
+W0812 15:33:54.187408   38904 start.go:609] dial failed (will retry): dial tcp 192.168.99.118:22: i/o timeout
+W0812 15:33:54.187721   38904 out.go:242] ❌  minikube is unable to connect to the VM: dial tcp 192.168.99.118:22: i/o timeout
+
+	This is likely due to one of two reasons:
+
+	- VPN or firewall interference
+	- virtualbox network configuration issue
+
+	Suggested workarounds:
+
+	- Disable your local VPN or firewall software
+	- Configure your local VPN or firewall to allow access to 192.168.99.118
+	- Restart or reinstall virtualbox
+	- Use an alternative --vm-driver
+	- Use --force to override this connectivity check
+	
+I0812 15:33:54.192488   38904 out.go:177] 
+W0812 15:33:54.192752   38904 out.go:242] ❌  Exiting due to GUEST_PROVISION: Failed to validate network: dial tcp 192.168.99.118:22: i/o timeout
+W0812 15:33:54.192792   38904 out.go:242] 
+W0812 15:33:54.195543   38904 out.go:242] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+
+* 

@@ -1,0 +1,83 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-deployment
+  namespace: echo
+
+  labels:
+    service: echo
+
+spec:
+  selector:
+    matchLabels:
+      app: echo
+      service: echo
+  
+  template:
+    metadata:
+      labels:
+        app: echo
+        service: echo
+    
+    spec:
+      containers:
+      - name: echo
+        image: hashicorp/http-echo
+        args:
+        - "-text=echo svc working!"
+        
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
+        ports:
+        - containerPort: 5678
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-svc
+  namespace: echo
+
+  labels:
+    name: echo-svc
+    service: echo
+
+spec:
+  selector:
+    app: echo
+    service: echo
+  
+  ports:
+  - protocol: TCP
+    port: 5678
+    targetPort: 5678
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: echo-ingress
+  namespace: echo
+
+  labels:
+    name: echo-ingress
+    service: echo
+
+spec:
+  rules:
+
+  - host: echo.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        
+        backend:
+          service:
+            name: echo-svc
+            port: 
+              number: 5678
