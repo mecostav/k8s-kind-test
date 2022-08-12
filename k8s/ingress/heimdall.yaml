@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: heimdall
+  namespace: heimdall
+
+  labels:
+    name: heimdall
+    service: heimdall
+
+spec:
+  rules:
+  - host: sandbox.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: heimdall
+            port: 
+              number: 80
