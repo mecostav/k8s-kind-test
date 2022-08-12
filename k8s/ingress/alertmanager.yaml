@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: alertmanager-ingress
+  namespace: monitoring
+
+  labels:
+    name: alertmanager-ingress
+spec:
+  rules:
+  
+  - host: alertmanager.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: kube-prometheus-alertmanager
+            port: 
+              number: 9093
