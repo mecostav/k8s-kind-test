@@ -70,11 +70,11 @@ metadata:
 spec:
   rules:
 
-  - host: echo.local
+  - host: sandbox.local
     http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: "/echo/"
         
         backend:
           service:
